@@ -1,0 +1,72 @@
+#include <iostream> 
+#define PI 3.14 
+using namespace std; 
+class Circle 
+{ 
+private: 
+double mRadius;
+public: 
+Circle():mRadius(1) 
+{} 
+~Circle(){} 
+void setRadius(double rad) 
+{ 
+mRadius=rad;
+} 
+void getRadius() 
+{ 
+cout<<"半徑="<<mRadius<<"\n";
+} 
+void getPerimeter() 
+{ 
+cout<<"圓的周長="<<2*PI*mRadius<<"\n";
+} 
+void getArea() 
+{ 
+cout<<"圓的面積="<<PI*mRadius*mRadius<<"\n";
+} 
+
+}; 
+
+int main() 
+{ 
+int radius; 
+Circle cir; 
+cout<<"輸入半徑:"; 
+cin>>radius; 
+cout<<"\n"; 
+cir.setRadius(radius); 
+cir.getRadius();  
+cir.getPerimeter(); 
+cir.getArea(); 
+
+system("pause"); 
+return 0; 
+
+} 
+----------------------------------------------------------
+=========================================================
+#include <cstdlib>
+#include <iostream>
+
+using namespace std;
+float sarea(float pi, int r){
+      return 4*pi*r*r;
+      }
+float svolumn(float pi, int r){
+      return 4*pi*r*r*r/3;
+      }
+int main(int argc, char *argv[])
+{
+    float pi = 3.1415926;
+    int r = 5;
+    
+    cout << "表面積: " << sarea(pi,r) << endl;
+    cout << "體積: " << svolumn(pi,r) << endl;
+     
+    
+    system("PAUSE");
+    return EXIT_SUCCESS;
+}
+--------------------------------------------------------
+==========================================================
